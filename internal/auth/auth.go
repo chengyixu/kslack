@@ -6,9 +6,9 @@ import (
 )
 
 func GetToken() (string, error) {
-	token := os.Getenv("SLACK_BOT_TOKEN")
+	token := os.Getenv("SLACK_TOKEN")
 	if token == "" {
-		return "", fmt.Errorf("SLACK_BOT_TOKEN environment variable is required")
+		return "", fmt.Errorf("SLACK_TOKEN environment variable is required (user or bot token)")
 	}
 	return token, nil
 }
